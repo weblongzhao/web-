@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="monitor-signature" content="monitor:player:html5">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link rel="image_src" href="files/shot.png">
+ <link rel="shortcut icon" href="files/thumb/1.jpg" />
+<link rel="apple-touch-icon" href="files/thumb/1.jpg" />
+<meta name="og:image" content="files/shot.png">
+<meta property="og:image" content="files/shot.png">
+<title>中联天晟画册</title>
+<link rel="stylesheet" href="style/style.css" />
+<link rel="stylesheet" href="style/player.css" />
+<link rel="stylesheet" href="style/phoneTemplate.css" />
+<script src="javascript/jquery-1.9.1.min.js"></script>
+<script src="javascript/config.js"></script>
+<style type="text/css">
+#miSetting{display:none;}
+#miPrint{display:none;}
+#miShare{display:none;}
+.box{width:260px;height:140px;background:#c5c5c7;position:fixed;left:50%;top:50%;margin-left:-130px;margin-top:-70px;z-index:9999999999;border-radius:4px;display:none;}
+.box h2{width:100%;height:60px;line-height:60px;text-align: center;font-size:18px;}
+.box span{display:block;padding:0 10px;}
+.box a{display:block;color:#fff;width:96px;height:30px;border-radius:4px;text-align: center;line-height:30px;margin:0 auto;}
+.box a:hover{text-decoration:none;}
+.box a.firstA{float:left;background:#2e8ded;}
+.box a.sendA{float:right;background:#fff;color:#555;}
+#gohome{position:fixed;right:3%;color:#dbdbdb;text-decoration:none;font-weight:bold;z-index:99;line-height:40px;display:none;}
+@media screen and (max-width:600px){#gohome{right:50px;}}
+</style>
+<script language='javascript' type='text/javascript'>
+    $(function () {
+        setTimeout(function(){
+            $("#gohome").show();
+        }, 3000);
+        var boxZCookie = getCookie('boxZ');
+        if(boxZCookie == 1){
+        }else {
+            $(".box").show();
+            var box = 1;
+            document.cookie="boxZ="+ box;
+        }
+		$(".sendA").click(function(){
+        $(".box").hide();
+		});
+    });
+    function getCookie(name) {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return arr[2];
+        else
+            return null;
+    }
+</script>
+</head>
+<body>
+<a href="http://www.zlts.net/news/Sobook" target="_blank" id="gohome">前往首页</a>
+<div class="box">
+    <h2>左右滑动翻看文档</h2>
+    <span>
+        <a href="http://www.zlts.net/index.php?m=Home&c=Voone&a=contact" target="_blank" class="firstA">索要文档</a>
+        <a href="javascript:;" class="sendA">继续翻看</a>
+    </span>
+</div>
+<script src="javascript/bookmark_config.min.js"></script>
+<script src="javascript/LoadingJS.js"></script>
+<script src="javascript/main.js"></script>
+<link rel="stylesheet" href="style/template.css" />
+<script type="text/javascript">
+	var sendvisitinfo = function(type,page){};
+</script>
+</body>
+</html>
